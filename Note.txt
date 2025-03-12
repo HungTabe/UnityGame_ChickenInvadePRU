@@ -1,1 +1,18 @@
-AAA
+1) Import tài nguyên đã thiết kế
+2) Vào Folder background rồi - kéo img vào vùng camera
+2) Kéo dãn img ra - vào tab game rồi chỉnh free aspect thành FullHD 
+3) Kéo phi thuyền ship vào Scene tab - và kéo protected vào Scence tab
+4) Chọn protected tại sprite để hiện inspect của no chỉnh phần inspect - SpriteMode - 
+pixelsPerUnit thành 600 để khớp với ship - apply
+5) Kéo gameObj protected vào gameObj ship rồi chỉnh thông số xyz của protected về 000 để ship
+ở giữa - gọi mới là Shield
+6) Dùng animation để xoay gameObj Shield quanh ship
+7) Tại Asset tạo folder Animation rồi tạo Folder Shield cho ship
+8) Chọn gameObj Shield rồi STRL 6 để mở AnimationTab
+9) Tạo bằng nút create - rồi chọn add prop - chọn transform - chọn rotate - đưa tỏ tới 0.15
+rồi set z về -97 - add key frame rồi xóa key cuối đi
+10) Vào compo Shield rồi chọn Animator rồi bật Apply root motion lên là ok
+
+
+================================================================================
+
