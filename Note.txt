@@ -16,3 +16,16 @@ rồi set z về -97 - add key frame rồi xóa key cuối đi
 
 ================================================================================
 
+11) Vào Background - đặt order in layer thành -10
+12) Tạo folder sccipt ỏ asset vào script để tạo ship script
+13) Script theo kiểu monoBehave nhé và kéo vào compo và dup click để vào IDE
+14) Exlain in script and then update speed to 10 to move ship
+
+================================================================================
+
+
+
+
+
+
+
