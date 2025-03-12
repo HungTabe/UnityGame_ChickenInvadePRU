@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShipScript : MonoBehaviour
 {
@@ -23,5 +23,18 @@ public class ShipScript : MonoBehaviour
 
         // Normalize to down length of direction to 1 - so min speed change when move
         transform.position += direction.normalized * Time.deltaTime * Speed;
+
+        // Convert coordinates from the screen to the world to know the limit of the screen in the 3D coordinate system by TopLeftPoint
+        Vector3 TopLeftPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
+
+        /*
+         🔹 Keep the ship in the screen by limiting X and Y within the range of Topleftpoint.
+         🔹 Use mathf.clamp () to make sure the ship does not go out to the play area.
+         */
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x,TopLeftPoint.x*-1,TopLeftPoint.x),
+            Mathf.Clamp(transform.position.y,TopLeftPoint.y*-1,TopLeftPoint.y));
+
+
     }
 }
