@@ -76,6 +76,21 @@ Tất cả bullet prefabs đặt overrides applyAll nhé
 
 Thiết lập tất cả
 
+==========================================================
+
+Vô ship script để tạo logic bắn
+
+Tạo 2 hàm move và fire : move di chuyển fire thì bắn đạn bằng khởi tạo prefabs
+Kê cái list đạn và tier đạn
+
+Hàm update : Move() ; Fire()
+
+Kéo list prefabs đạn và bullet list của ship script
+
+===========
+Viên đạn bắn ra phải biến mất để tránh nặng game - logic xử lý đạn
+Idea : Tạo biến khoảng cách để nếu đạn bay quá khoảng cách thì xóa đạn
+
 
 
 
