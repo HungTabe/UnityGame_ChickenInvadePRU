@@ -445,6 +445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+  BulletList:
+  - {fileID: 3974154372086515690, guid: 0506c1227c2d95141ac10053928b697e, type: 3}
+  - {fileID: 1701513531562555345, guid: 179857e4d0bf37d468d28c2e5e4dcd6d, type: 3}
+  - {fileID: 7574861168361833556, guid: 8f6775b59578a674abde6aa18ca2d8a5, type: 3}
+  - {fileID: 7268626426587310643, guid: 6a57c0a24212396488fb91796b308706, type: 3}
+  - {fileID: 1502198502045615819, guid: 6dc3a93882ff56b409d6f8ba0e97e10c, type: 3}
+  - {fileID: 7091075920010184646, guid: 8f89a0f9a26ff5f49a1a2570089906e6, type: 3}
+  CurrentTierBullet: 4
 --- !u!1 &1007690936
 GameObject:
   m_ObjectHideFlags: 0

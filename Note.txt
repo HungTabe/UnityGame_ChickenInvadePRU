@@ -92,6 +92,65 @@ Viên đạn bắn ra phải biến mất để tránh nặng game - logic xử 
 Idea : Tạo biến khoảng cách để nếu đạn bay quá khoảng cách thì xóa đạn
 
 
+==== Tiếp tục ci-6
+
+Chú gà từ sprite to tách ra cho nó nhỏ rồi kéo mảnh nhỏ vào hierachy để tạo game obj
+sau đó add component BoxCollider2D và Rigidbody2D vào
+Animation bay thì CTRL 6 và game object - create - kéo sprite chuỗi vào và thêm sữa xóa
+các key frame để có animation cho game obj
+
+BoxCollider 2D bật cái nút EditColider để chịnh khung va chạm
+
+Rigid 2D cho gravity scale là 0 để gà nó bay
+
+Đặt đạn trigger có thể xuyên vật
+
+Vào prefab bullet bôi đen hết rồi tại compo box collider tick cái isTrigger lên
+
+------------------
+
+Lập trình gà đẻ trứng
+
+Tạo chickenscript
+
+Có sử dụng coroutine
+Coroutine trong Unity là gì?
+Coroutine (hợp tác luồng) là một phương thức đặc biệt trong Unity giúp bạn thực hiện 
+các tác vụ bất đồng bộ mà không chặn toàn bộ chương trình.
+
+Nó cho phép tạm dừng thực thi tại một số điểm nhất định và tiếp tục chạy ở khung hình 
+tiếp theo hoặc sau một khoảng thời gian cụ thể.
+
+Tại sao cần Coroutine?
+Thông thường, khi bạn chạy một vòng lặp hoặc chờ trong một hàm Update(), Unity sẽ bị 
+chặn và game có thể bị đơ (freeze). Coroutine giúp chạy nền các tác vụ mà không ảnh hưởng 
+đến hiệu suất game.Nhưng với Coroutine, game vẫn tiếp tục chạy mà không bị chặn
+
+SpawnEgg()
+
+IEnumerator, cho phép Unity tạm dừng thực thi tại một số điểm mà không cần chặn 
+toàn bộ chương trình.
+
+3. Instantiate(EggPrefabs, transform.position, Quaternion.identity);
+Instantiate: Tạo ra một bản sao của EggPrefabs tại vị trí hiện tại (transform.position).
+Quaternion.identity: Giữ nguyên hướng quay của trứng (không xoay).
+
+4. yield return new WaitForSeconds(Random.Range(2, 7));
+WaitForSeconds(n): Tạm dừng coroutine trong n giây.
+Random.Range(2, 7): Chọn ngẫu nhiên một số từ 2 đến 6 giây 
+(vì giá trị tối đa của Random.Range dạng int sẽ không bao gồm 7).
+
+Đưa script vào con gà 
+
+Keo hinh anh egg và screen de tao game obj trung
+add component rigid 2d de co trong luc roi
+
+Tao prefab cho chicken and egg roi sau do keo egg prefab vao chicken script roi
+apply all de ap dung cho chick ken prefab
+
+
+
+
 
 
 
