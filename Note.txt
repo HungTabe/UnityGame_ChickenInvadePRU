@@ -149,6 +149,50 @@ Tao prefab cho chicken and egg roi sau do keo egg prefab vao chicken script roi
 apply all de ap dung cho chick ken prefab
 
 
+//////////////////////////
+
+Video 6 
+
+Thêm hitbox để xử lý vacaham cho phi thuyen = poligon collider 2d componen
+poligon collider 2d sẽ bị lem nên phải dùng thêm Composite collider 2d
+Thông qua composite Operation merge nha
+
+Composite Colli 2D bật isTrigger lên
+
+Còn tắt gravity nha
+
+THÊM HIT BOX CHO EGG
+
+Dùng capsule collider
+Tắt cái box collider nhé và chọn tam tinh để chỉnh kích cỡ bao
+
+Chỉnh ship script để xử lý logic va chạm
+
+
+Có 1 lỗi là khi viế hàm OnTriggerEnter2D thì bắn đạn ra nó cx nghĩ là
+va chạm mà destroy cái ship
+
+====
+
+Chuẩn bị thiết kế cơ chế explosive
+
+Sau khi soạn xong hàm ondestroy để tạo hiệu úng thì
+kéo prefab vụ nổ vào ship gameobj từ sprite/toonExplo/prefab
+
+Nổ liên tục thì phải thêm logic nổ 1 lần
+
+bằng var và destroy kèm time
+
+logic trong shipScript
+
+====== End v6
+
+
+
+
+
+
+
 
 
 

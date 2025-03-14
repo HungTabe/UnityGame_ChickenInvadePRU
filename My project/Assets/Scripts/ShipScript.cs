@@ -8,6 +8,8 @@ public class ShipScript : MonoBehaviour
     [SerializeField] private GameObject[] BulletList;
     // Var store tier of bullet
     [SerializeField] private int CurrentTierBullet;
+    // Game object make VFX HieuUng
+    [SerializeField] private GameObject VFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,26 +54,52 @@ public class ShipScript : MonoBehaviour
     void Fire()
     {
         // Condition to avoid continuous shooting
-        if (Input.GetMouseButtonDown(0)) { 
-        /*
-        Instantiate (Bulletlist [curletierbullet], Transform.position, Quatnion.Itentity);
+        if (Input.GetMouseButtonDown(0)) {
+            /*
+            Instantiate (Bulletlist [curletierbullet], Transform.position, Quatnion.Itentity);
 
-        Bulletlist [curlentiierbullet]
-            Bulletlist is a list (list or array) containing bullets.
-            CurrentTiierbullet is the index (Index) to select the current type of ammunition from the list.
-            For example, if curlentiierbullet = 1, the second bullet in the Bulletlist list will be fired.
-        
-        Transform.position
-            The location of the object calls the Fire () function (usually the position of the gun or ship).
-            The bullet will appear correctly at the position of this object.
-        
-        Quatnion.Dentity
-            Quatnion is the type of data that shows the rotating angle in 3D space.
-            Quatnion.Dentity means not rotating (rotation angle of 0).
-            The bullet will be created without being rotated. 
-        
-        */
-        Instantiate(BulletList[CurrentTierBullet], transform.position, Quaternion.identity);
+            Bulletlist [curlentiierbullet]
+                Bulletlist is a list (list or array) containing bullets.
+                CurrentTiierbullet is the index (Index) to select the current type of ammunition from the list.
+                For example, if curlentiierbullet = 1, the second bullet in the Bulletlist list will be fired.
+
+            Transform.position
+                The location of the object calls the Fire () function (usually the position of the gun or ship).
+                The bullet will appear correctly at the position of this object.
+
+            Quatnion.Dentity
+                Quatnion is the type of data that shows the rotating angle in 3D space.
+                Quatnion.Dentity means not rotating (rotation angle of 0).
+                The bullet will be created without being rotated. 
+
+            */
+            shoot();
         }
+    }
+
+    void shoot()
+    {
+        Instantiate(BulletList[CurrentTierBullet], transform.position, Quaternion.identity);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+
+    }
+
+    // OnDestroy run when this gameObj is destroyed
+    private void OnDestroy()
+    {
+        // Check scene still running or not to show VFX
+        {
+            /* Make gameObj of Explosion base on prefabs VFX, location is ship location, no z round */
+            // make var of explosion then destroy after 1s
+
+            var vfx = Instantiate(VFX, transform.position, Quaternion.identity);
+
+            Destroy(vfx, 1f);
+        }
+
     }
 }
