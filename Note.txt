@@ -231,6 +231,59 @@ add x y z
 
 reset position trong properti vaf anim luon
 
+Chinh anim de ga bay dung quy dao
+
+==================================
+V10
+
+Modify qua egg
+Keo prefab egg len hierachy
+
+Vao asset anim chick roi trl 6 tren egg de tao animation tai do
+shif keo het animation vao roi dan length ra 
+
+vao egg de tao if chuyen eff thanh eff breadk
+
+Vao animator cua egg cho cai co 2 box lien ket nhau
+
+animation mac dinh la egg break - tao state moi - dat state moi mac dinh
+Tro 1 mui ten transition tu any state sang egg breack state 
+
+tao tran thi chuot phai vao va chon muc 2
+
+Vao param triggere tao param break 
+
+chon dieu kien chuyen sang tate break laf param vua tao
+
+chon transition roi chon param breack
+
+Do la cau truc animation controller
+
+Tao egg script de xu ly animation qua trung gan vao game obj
+
+    // 2 var to take 2 component
+
+        // run start corotine to continue check position
+
+    // Make enumerator to check height status to break
+
+            // logic check position and break when satisfy height
+
+sau save keo cac component tu animator den rig vao tham so
+
+egg chua chay animation vi chua thoa vaong lap
+
+sau khi tesst xong vao egg chay overrid thanh apply all de apply het cho prefabs eff
+
+Chinh sua lai logic de trung tai SpawnEgg()
+
+
+
+
+
+
+
+
 
 
 

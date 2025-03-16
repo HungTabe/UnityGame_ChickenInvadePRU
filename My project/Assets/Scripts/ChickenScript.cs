@@ -30,8 +30,9 @@ public class ChickenScript : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(Random.Range(4, 20));
+
             Instantiate(EggPrefabs, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(2, 7));
         }
     }
 
