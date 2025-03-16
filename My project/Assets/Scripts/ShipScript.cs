@@ -96,6 +96,7 @@ public class ShipScript : MonoBehaviour
     private void OnDestroy()
     {
         // Check scene still running or not to show VFX
+        if(gameObject.scene.isLoaded)
         {
             /* Make gameObj of Explosion base on prefabs VFX, location is ship location, no z round */
             // make var of explosion then destroy after 1s
