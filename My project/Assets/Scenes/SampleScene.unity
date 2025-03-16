@@ -456,7 +456,7 @@ MonoBehaviour:
   - {fileID: 1502198502045615819, guid: 6dc3a93882ff56b409d6f8ba0e97e10c, type: 3}
   - {fileID: 7091075920010184646, guid: 8f89a0f9a26ff5f49a1a2570089906e6, type: 3}
   CurrentTierBullet: 4
-  VFX: {fileID: 0}
+  VFX: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
 --- !u!60 &601792091
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8d0207ccd428444af094001d70a994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenPrefaps: {fileID: 0}
+  ChickenPreFaps: {fileID: 6568942448000226810, guid: 9f82e3131ecb7e9438592842f0b6e68b, type: 3}
 --- !u!4 &1181843639
 Transform:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ Transform:
   m_GameObject: {fileID: 1181843637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00999999, y: 2.22, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
