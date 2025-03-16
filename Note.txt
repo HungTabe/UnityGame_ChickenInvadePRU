@@ -204,7 +204,32 @@ Chinh tat ta component collider cua bullet va chicken thanh istrigger
 
 
 
+============================================
+V9
 
+Make game obj to store all chicken was spawned GridChicken
+
+Chinh lai spawner script de all chicken spawn to gameobj GridChicken
+
+Tao 1 bien transform gridchicken de nhan gameobj gridchicken truyen vao
+
+roi gan transform parent cuar cacs chicken vafo grid chicken
+
+Truyen gameobj girdchien vao sript spawner
+
+OKKK
+
+XU LY GA DI CHUYEN XUNG QUANH
+
+su dung animation
+
+Vao asset anim chicken 
+
+Ctrl 6 tao anim
+
+add x y z
+
+reset position trong properti vaf anim luon
 
 
 

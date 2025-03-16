@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
     private float gridSize = 1;
     private Vector3 SpawnPos;
     [SerializeField] private GameObject ChickenPreFaps;
-    //[SerializeField] private Transform GirdChicken;
+    [SerializeField] private Transform GirdChicken;
     void Start()
     {
         float height = Camera.main.orthographicSize * 2;
@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
             {
                 SpawnPos.x = SpawnPos.x + gridSize;
                 GameObject Chicken = Instantiate(ChickenPreFaps, SpawnPos, Quaternion.identity);
-                // Chicken.transform.parent = GirdChicken;
+                Chicken.transform.parent = GirdChicken;
             }
             SpawnPos.x = x;
             SpawnPos.y -= gridSize;
