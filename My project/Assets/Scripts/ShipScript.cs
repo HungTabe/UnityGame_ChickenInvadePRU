@@ -84,7 +84,11 @@ public class ShipScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        // check tag to determine case destroy ship
+        if (collision.CompareTag("Chicken") || collision.CompareTag("Egg"))
+        {
+            Destroy(gameObject);
+        }
 
     }
 

@@ -34,4 +34,13 @@ public class ChickenScript : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(2, 7));
         }
     }
+
+    // OnTriggerEnter2D of chicken
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

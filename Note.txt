@@ -187,7 +187,20 @@ logic trong shipScript
 
 ====== End v6
 
+==============================
+Lam ga bien mat khi va cham voi dan
 
+Xu ly van de dan va cham voi phi thuyen gay no
+
+Bo sung logic neu trung va ga va cham thi moi no
+
+Kiem tra bang tag
+
+Thiet ke logic va cham khi ga voi vien dan
+
+Nhay dup vao gameObj trong hierachy de tro vao gameObj
+
+Chinh tat ta component collider cua bullet va chicken thanh istrigger
 
 
 
