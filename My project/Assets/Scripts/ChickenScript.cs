@@ -1,23 +1,19 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class ChickenScript : MonoBehaviour
 {
-
-    // Make game object for egg prefab
-    [SerializeField] private GameObject EggPrefabs;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Awake Called as soon as Gamebject is activated, before the Start ().
+    [SerializeField] private GameObject EggPreFaps;
+    [SerializeField] private int score;
+    [SerializeField] private GameObject chickenLePreFaps;
+
     private void Awake()
     {
-        StartCoroutine(SpawnEgg());
+        StartCoroutine(SpamEgg());
     }
+
 
     // Update is called once per frame
     void Update()
@@ -25,22 +21,32 @@ public class ChickenScript : MonoBehaviour
         
     }
 
-    // Spawn egg function
-    IEnumerator SpawnEgg()
+    IEnumerator SpamEgg()
     {
         while (true)
         {
-            Instantiate(EggPrefabs, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(2, 7));
+            yield return new WaitForSeconds(Random.Range(4, 20));
+            Instantiate(EggPreFaps, transform.position, Quaternion.identity);
+
+            
+
         }
     }
 
-    // OnTriggerEnter2D of chicken
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {
+            ScoreController.instance.GetScore(score);
+            Instantiate(chickenLePreFaps, transform.position, Quaternion.identity);
+
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
+    private void OnDestroy()
+    {
+        Spawner.instance.DecreaChicken();
+    }
+
 }
